@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择文件</title>
+  <link rel="stylesheet" href="styles/file-picker.css">
+</head>
+<body>
+  <div class="picker-container">
+    <h2>保存到文件</h2>
+    
+    <div class="new-file-section">
+      <button id="newFileBtn" class="primary-button">
+        <span class="icon">📄</span>
+        <span>新建文件</span>
+      </button>
+      <input type="text" id="newFileName" placeholder="输入文件名..." />
+    </div>
+    
+    <div class="divider">
+      <span>或选择现有文件</span>
+    </div>
+    
+    <div class="file-list-section">
+      <div id="loadingIndicator" class="loading">加载文件列表...</div>
+      <div id="fileList" class="file-list"></div>
+      <div id="emptyState" class="empty-state" style="display: none;">
+        文件夹中没有Markdown文件
+      </div>
+    </div>
+    
+    <div class="actions">
+      <button id="cancelBtn" class="secondary-button">取消</button>
+    </div>
+  </div>
+  
+  <script src="scripts/file-picker.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian Quick Clip - 配置</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Obsidian Quick Clip 配置</h1>
+    
+    <div class="config-section">
+      <h2>目标文件夹</h2>
+      <button id="selectFolder">选择文件夹</button>
+      <p id="folderPath">未选择文件夹</p>
+    </div>
+    
+    <div class="config-section">
+      <h2>自定义前置文本</h2>
+      <textarea id="prefixText" rows="4" placeholder="在保存内容前添加的文本..."></textarea>
+    </div>
+    
+    <div class="config-section">
+      <h2>自定义后置文本</h2>
+      <textarea id="suffixText" rows="4" placeholder="在保存内容后添加的文本..."></textarea>
+    </div>
+    
+    <div class="config-section">
+      <h2>文件名设置</h2>
+      <label class="checkbox-label">
+        <input type="checkbox" id="addTimestamp">
+        <span>为每个新文件自动添加时间戳</span>
+      </label>
+      <p class="help-text">开启后，新建文件时会自动在文件名后添加时间戳（如：文件名-1234567890.md），避免文件名冲突。</p>
+      
+      <label class="checkbox-label">
+        <input type="checkbox" id="appendOnConflict" checked>
+        <span>同名文件自动追加内容（推荐）</span>
+      </label>
+      <p class="help-text">开启后，新建文件时如果存在同名文件，会自动改为追加模式，将内容添加到现有文件末尾。关闭后，会添加时间戳创建新文件。</p>
+    </div>
+    
+    <div class="config-section">
+      <h2>图片处理方式</h2>
+      <label class="radio-label">
+        <input type="radio" name="imageMode" id="imageModeDownload" value="download">
+        <span>下载图片到本地</span>
+      </label>
+      <p class="help-text-indent">将图片下载到 images 文件夹，使用 Obsidian 格式引用：![[images/文件名.ext]]</p>
+      
+      <label class="radio-label">
+        <input type="radio" name="imageMode" id="imageModeUrl" value="url" checked>
+        <span>保留图片URL链接（推荐）</span>
+      </label>
+      <p class="help-text-indent">不下载图片，直接使用原始URL：![alt](https://...)，节省空间且加载更快</p>
+    </div>
+    
+    <div class="config-section">
+      <h2>保存方式</h2>
+      <label class="checkbox-label">
+        <input type="checkbox" id="quickSaveMode" checked>
+        <span>快速保存模式（推荐）</span>
+      </label>
+      <p class="help-text">开启后，右键保存时直接显示文件列表，点击即可快速保存。关闭后使用弹窗方式选择文件。</p>
+    </div>
+    
+    <button id="saveConfig" class="save-button">保存配置</button>
+    <div id="status" class="status"></div>
+  </div>
+  
+  <script src="scripts/options.js"></script>
+</body>
+</html>

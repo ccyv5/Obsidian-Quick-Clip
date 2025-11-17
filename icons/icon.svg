@@ -1,0 +1,16 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#6c5ce7" rx="20"/>
+  
+  <!-- Clipboard shape -->
+  <rect x="32" y="24" width="64" height="80" fill="white" rx="4"/>
+  <rect x="48" y="16" width="32" height="12" fill="white" rx="2"/>
+  
+  <!-- Lines representing text -->
+  <rect x="44" y="40" width="40" height="4" fill="#6c5ce7" rx="2"/>
+  <rect x="44" y="52" width="40" height="4" fill="#6c5ce7" rx="2"/>
+  <rect x="44" y="64" width="32" height="4" fill="#6c5ce7" rx="2"/>
+  
+  <!-- Checkmark -->
+  <path d="M 52 80 L 60 88 L 76 72" stroke="#6c5ce7" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
